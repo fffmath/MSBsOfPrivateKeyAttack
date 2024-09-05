@@ -6,7 +6,7 @@ Code for the paper [“Small Public Exponent Brings More: Improved Partial Key E
 
 ### Our results
 
-Compared to previous results [BDF98], we reduce the number of the leaked bits in $d$ that are needed to mount the attack by $\log_2 (e)$ bits. For $e=65537$, previous work required an additional enumeration of 17 bits to achieve our new bound, resulting in a $2^{10}$ (or 1,024x) increase in time consumption. We also provided a summary of comparison as follows:
+Compared to previous results [^BDF98], we reduce the number of the leaked bits in $d$ that are needed to mount the attack by $\log_2 (e)$ bits. For $e=65537$, previous work required an additional enumeration of 17 bits to achieve our new bound, resulting in a $2^{10}$ (or 1,024x) increase in time consumption. We also provided a summary of comparison as follows:
 
 ![Comparison](./img/comparsion.png)
 
@@ -52,4 +52,4 @@ You can find more information on [my personal website](https://www.fffmath.com/)
 
 This script is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-[BDF98]: D. Boneh, G. Durfee, and Y. Frankel. Exposing an RSA private key given a small fraction of its bits, 1998. Full version of the work from Asiacrypt’98, available at [Link](http://crypto.stanford.edu/~dabo/abstracts/bits_of_d.html).
+[^BDF98]: D. Boneh, G. Durfee, and Y. Frankel. Exposing an RSA private key given a small fraction of its bits, 1998. Full version of the work from Asiacrypt’98, available at [Link](http://crypto.stanford.edu/~dabo/abstracts/bits_of_d.html).
