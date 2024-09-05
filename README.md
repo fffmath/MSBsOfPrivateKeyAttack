@@ -35,7 +35,7 @@ For example
 
 ```bash
 # Run toy exampples.
-sage -python toyExampleBDF # Using attack in [^BDF98]
+sage -python toyExampleBDF # Using previous attack
 
 sage -python toyExampleBDF # Using our new attack
 ```
