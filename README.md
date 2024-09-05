@@ -26,7 +26,9 @@ You can check your SageMath Python version using the following command:
 $ sage -python --version
 Python 3.11.1
 ```
+
 Note: If your SageMath Python version is older than 3.11.1, some features in some scripts might not work.
+
 ## Usage
 
 Usage: sage -python `<file>`
@@ -35,9 +37,9 @@ For example
 
 ```bash
 # Run toy exampples.
-sage -python toyExampleBDF # Using previous attack
+sage -python toyExampleBDF.py # Using previous attack
 
-sage -python toyExampleBDF # Using our new attack
+sage -python toyExampleBDF.py # Using our new attack
 ```
 
 ### Debug
