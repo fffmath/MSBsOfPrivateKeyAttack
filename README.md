@@ -48,7 +48,7 @@ sage -python toyExampleFNP.py # Using our new attack
 
 You can enable debugging by setting `logging.basicConfig(filename='attack.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')` in your code.
 
-### Some related CTF challenges 🚩:
+### Some related CTF challenges 🚩
 
 - SUCTF 2025 [[SU_rsa.py](https://www.fffmath.com/code/SU_rsa.py)][WriteUp]
 
