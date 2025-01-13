@@ -2,7 +2,7 @@
 
 Code for the paper [“Small Public Exponent Brings More: Improved Partial Key Exposure Attacks against RSA"](https://eprint.iacr.org/2024/1329.pdf).
 
-I'm delighted to see these results appear in CTF competitions, and I would love to know which CTF they appear in. Feel free to email me the challenge details and your competition link, and I'll update to share them at [Some related CTF challenges](#some-related-ctf-challenges) 😃😃😃.
+I'm delighted to see these results appear in CTF competitions 🚩, and I would love to know which CTF they appear in. Feel free to email me the challenge details and your competition link, and I'll update to share them at [Some related CTF challenges](#some-related-ctf-challenges) 😃😃😃.
 
 ## Introduction
 
@@ -48,7 +48,7 @@ sage -python toyExampleFNP.py # Using our new attack
 
 You can enable debugging by setting `logging.basicConfig(filename='attack.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')` in your code.
 
-### Some related CTF challenges:
+### Some related CTF challenges 🚩:
 
 - SUCTF 2025 [[SU_rsa.py](https://www.fffmath.com/code/SU_rsa.py)][WriteUp]
 
