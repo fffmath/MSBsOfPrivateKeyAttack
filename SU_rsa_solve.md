@@ -1,0 +1,44 @@
+
+### SU_rsa_solve
+
+SU_rsa writeup from [link](https://mp.weixin.qq.com/s/WAtpKN7lMzzr0pGUX07juA)
+
+```python
+# https://github.com/fffmath/MSBsOfPrivateKeyAttack/
+import time
+import logging
+from attacks.rsa.fnp import attack
+from shared.partial_integer import PartialInteger
+from sage.all import inverse_mod, next_prime, ZZ, PolynomialRing
+
+logging.basicConfig(filename='attack.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+d_m = 54846367460362174332079522877510670032871200032162046677317492493462931044216323394426650814743565762481796045534803612751698364585822047676578654787832771646295054609274740117061370718708622855577527177104905114099420613343527343145928755498638387667064228376160623881856439218281811203793522182599504560128
+N =  102371500687797342407596664857291734254917985018214775746292433509077140372871717687125679767929573899320192533126974567980143105445007878861163511159294802350697707435107548927953839625147773016776671583898492755338444338394630801056367836711191009369960379855825277626760709076218114602209903833128735441623
+e = 112238903025225752449505695131644979150784442753977451850362059850426421356123
+
+msbs = 512
+enumeration = 8
+m = 75
+thetaLogN = 4
+ifFlatter = True
+
+partial_d = PartialInteger()
+partial_d.add_unknown(512)
+partial_d.add_known(d_m >> 512, 512)
+
+k_ = (e * d_m - 1) // N
+logging.info("Generating solutions for k candidates...")
+for k in range(k_ + 1, k_ + 2):
+    start_time = time.time()
+    result = attack(N, e, partial_d, m=m, k=k, thetaLogN=thetaLogN, enumeration=enumeration, ifFlatter=ifFlatter)
+    print(result)
+    print("Time:", time.time() - start_time)
+```
+
+and then
+
+```python
+from hashlib import sha256
+print('SUCTF{%s}' % sha256(str(11347685135451772316799055128658844076558937002070169522376774233969211713689222327103200800438106374510397161974671925195478541934100406041896292545674921).encode()).hexdigest()[:32])
+```
