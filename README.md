@@ -50,7 +50,7 @@ You can enable debugging by setting `logging.basicConfig(filename='attack.log', 
 
 ### Some related CTF challenges
 
-- SUCTF 2025 [[SU_rsa.py](https://www.fffmath.com/code/SU_rsa.py)][WriteUp]
+- SUCTF 2025 [[SU_rsa.py](SU_rsa.py)][[WriteUp](SU_rsa_solve.md)]
 
 
 ### Author
